@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="486.0" prefWidth="386.0" style="-fx-background-color: rgb(45, 45, 45);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.Controller">
+   <children>
+      <Text fx:id="resultText" fill="WHITE" layoutX="47.0" layoutY="135.3505859375" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="289.93661427497864" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="76.0">
+         <font>
+            <Font name="Lato Black" size="55.0" />
+         </font>
+      </Text>
+      <Button fx:id="button1" layoutX="45.0" layoutY="236.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="1" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="button2" layoutX="124.0" layoutY="236.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="2" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button3" layoutX="201.0" layoutY="236.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="3" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button4" layoutX="45.0" layoutY="306.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="4" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5" layoutX="124.0" layoutY="306.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="5" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button6" layoutX="201.0" layoutY="306.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="6" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button7" layoutX="45.0" layoutY="377.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="7" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button8" layoutX="124.0" layoutY="377.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="8" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button9" layoutX="201.0" layoutY="377.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="9" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="button0" layoutX="279.0" layoutY="377.0" mnemonicParsing="false" onAction="#numberButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="0" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonAdd" layoutX="279.0" layoutY="306.0" mnemonicParsing="false" onAction="#actionButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="+" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonSubstract" layoutX="279.0" layoutY="236.0" mnemonicParsing="false" onAction="#actionButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="-" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonDivide" layoutX="124.0" layoutY="168.0" mnemonicParsing="false" onAction="#actionButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="/" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonClear" layoutX="45.0" layoutY="168.0" mnemonicParsing="false" onAction="#actionButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="C" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonAdd1" layoutX="201.0" layoutY="168.0" mnemonicParsing="false" onAction="#actionButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="X" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonAdd11" layoutX="279.0" layoutY="168.0" mnemonicParsing="false" onAction="#actionButtonClicked" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: rgb(90,90,90);" text="&lt;-" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
