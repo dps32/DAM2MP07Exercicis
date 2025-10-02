@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox style="-fx-background-color: rgb(220,220,220);" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.MobileListController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: rgb(107, 196, 255);">
+         <children>
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#goBack" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="←" />
+            <Label fx:id="categoryTitle" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Lista" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox fx:id="listContainer" alignment="TOP_CENTER" spacing="15.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

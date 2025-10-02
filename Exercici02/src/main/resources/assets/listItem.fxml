@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80" prefWidth="200" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ListItem">
+   <children>
+      <ImageView fx:id="itemImage" fitHeight="57.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin></ImageView>
+      <Label fx:id="itemName">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+   </children>
+</HBox>

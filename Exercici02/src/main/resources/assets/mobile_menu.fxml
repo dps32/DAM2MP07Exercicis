@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.MobileMenuController">
+   <children>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: rgb(107, 196, 255); -fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Nintendo DB">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </Label>
+      <Label maxWidth="1.7976931348623157E308" style="-fx-font-size: 14px; -fx-text-fill: gray; -fx-background-color: rgb(245,245,245);" text="Selecciona una categoría">
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+         </padding>
+      </Label>
+      <Button fx:id="btnGames" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toList" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-size: 16px; -fx-alignment: CENTER-LEFT; -fx-border-color: rgb(220,220,220); -fx-border-width: 0 0 1 0; -fx-background-radius: 0; -fx-border-radius: 0; -fx-cursor: hand;" text="Games">
+         <padding>
+            <Insets bottom="18.0" left="15.0" right="15.0" top="18.0" />
+         </padding>
+      </Button>
+      <Button fx:id="btnCharacters" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toList" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-size: 16px; -fx-alignment: CENTER-LEFT; -fx-border-color: rgb(220,220,220); -fx-border-width: 0 0 1 0; -fx-background-radius: 0; -fx-border-radius: 0; -fx-cursor: hand;" text="Characters">
+         <padding>
+            <Insets bottom="18.0" left="15.0" right="15.0" top="18.0" />
+         </padding>
+      </Button>
+      <Button fx:id="btnConsoles" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toList" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-size: 16px; -fx-alignment: CENTER-LEFT; -fx-border-color: rgb(220,220,220); -fx-border-width: 0 0 1 0; -fx-background-radius: 0; -fx-border-radius: 0; -fx-cursor: hand;" text="Consoles">
+         <padding>
+            <Insets bottom="18.0" left="15.0" right="15.0" top="18.0" />
+         </padding>
+      </Button>
+   </children>
+</VBox>

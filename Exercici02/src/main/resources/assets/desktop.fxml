@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.Controller">
+   <top>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: rgb(107, 196, 255);" text="Nintendo DB" textAlignment="CENTER">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <padding>
+            <Insets top="10.0" bottom="10.0" />
+         </padding>
+      </Label>
+   </top>
+   <left>
+      <VBox prefWidth="250.0" spacing="10" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="10.0" right="10.0" bottom="10.0" left="10.0" />
+         </padding>
+         <children>
+            <ChoiceBox fx:id="choiceBox" maxWidth="1.7976931348623157E308" />
+            <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="yPane" spacing="10">
+                     <padding>
+                        <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER" spacing="15" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+         </padding>
+         <children>
+            <ImageView fx:id="detailImage" fitHeight="250.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="detailTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detailDescription" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
