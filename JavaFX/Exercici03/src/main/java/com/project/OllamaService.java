@@ -98,7 +98,7 @@ public class OllamaService {
 
 
 
-    // Envia imagen con prompt (sin imagen)
+    // Envia imagen con prompt
     public void sendImageMessage(File imageFile, String prompt, Consumer<String> onComplete, Consumer<String> onError) {
         isCancelled.set(false);
         
