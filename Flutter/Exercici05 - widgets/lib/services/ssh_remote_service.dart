@@ -324,7 +324,7 @@ class SshRemoteService {
     buffer.writeln('Permisos: ${entry.permissions}');
     buffer.writeln('ID usuario: ${entry.userId ?? '-'}');
     buffer.writeln('ID grupo: ${entry.groupId ?? '-'}');
-    buffer.writeln('Tamano: ${entry.size ?? '-'}');
+    buffer.writeln('Tamaño: ${entry.size ?? '-'}');
     return buffer.toString().trim();
   }
 

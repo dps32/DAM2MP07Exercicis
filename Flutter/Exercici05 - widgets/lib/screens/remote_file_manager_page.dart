@@ -1066,7 +1066,7 @@ class _RemoteFileManagerPageState extends State<RemoteFileManagerPage> {
               TextButton.icon(
                 onPressed: _loadingEntries ? null : _goToParentFolder,
                 icon: const Icon(Icons.arrow_upward),
-                label: const Text('Subir nivel'),
+                label: const Text('Retroceder'),
               ),
               TextButton.icon(
                 onPressed: _loadingEntries ? null : _uploadFile,
@@ -1094,12 +1094,15 @@ class _RemoteFileManagerPageState extends State<RemoteFileManagerPage> {
                         final selected = _selectedEntry?.path == entry.path;
                         return ListTile(
                           selected: selected,
-                          onTap: () {
+                          onTap: () async {
+                            if (entry.isDirectory) {
+                              await _openEntry(entry);
+                              return;
+                            }
                             setState(() {
                               _selectedEntry = entry;
                             });
                           },
-                          onLongPress: () => _openEntry(entry),
                           leading: Icon(
                             entry.isDirectory ? Icons.folder : Icons.description,
                           ),

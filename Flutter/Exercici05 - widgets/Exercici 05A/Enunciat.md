@@ -1,0 +1,92 @@
+<div style="display: flex; width: 100%;">
+    <div style="flex: 1; padding: 0px;">
+        <p>© Albert Palacios Jiménez, 2024</p>
+    </div>
+    <div style="flex: 1; padding: 0px; text-align: right;">
+        <img src="../assets/ieti.png" height="32" alt="Logo de IETI" style="max-height: 32px;">
+    </div>
+</div>
+<br/>
+
+# Gestor d'arxius al Proxmox
+
+Fes una aplicació 'Flutter' que permeti gestionar arxius al Proxmox.
+
+Podeu fer servir la llibreria dart:
+
+[dartssh2](https://pub.dev/packages/dartssh2)
+
+O Una llibreria per interactuar amb SSH a través de flutter.
+
+
+## Configuració de comptes
+
+Ha de permetre configurar varis servidors remots, amb les seves credencials.
+
+L'arxiu amb les configuracions ha de ser de tipus *.json* en alguna carpeta de l'aplicació (local).
+
+<br/>
+<center><img src="./img0.png" style="max-height: 400px" alt="">
+<br/></center>
+<br/>
+
+## Gestió d'arxius
+
+Ha de permetre gestionar els arxius i carpetes remots del proxmox. Un cop seleccionat un arxiu o carpeta, ha de permetre:
+
+- Canviar-li el nom
+- Descarregar-lo
+- Esborrar-lo
+- Mostrar informació i permissos d'usuari
+
+<br/>
+<center><img src="./img1.png" style="max-height: 400px" alt="">
+<br/></center>
+<br/>
+
+També ha de permetre pujar arxius locals al servidor remot.
+
+**Nota:** En cas que es puji una carpeta aquesta es comprimirà en format *.zip* mantenint els permissos, i es descomprimirà al servidor automàticament, sense deixar rastre de l'arxiu comprimit d'intercanvi.
+
+### Arxius comprimits
+
+Si es puja un arxiu comprimit tipus **.zip**, s'ha de permetre descomprimir-lo al servidor remot.
+
+## Servidors i ports
+
+Si es detecta una carpeta de servidor tipus **NodeJS** o **Java**, ha de permetre posar-lo en funcionament, reiniciar-lo o aturar-lo:
+
+- Si no està en funcionament, ha de permetre posar-lo en funcionament
+
+- Si està funcionant, ha de permetre reiniciar-lo o aturar-lo
+
+**Important**: En tot cas, ha de mostrar i configurar la redirecció de ports per tal que funcioni el servidor.
+
+<br/>
+<center><img src="./img2.png" style="max-height: 400px" alt="">
+<br/></center>
+<br/>
+
+## Widgets personalitzats
+
+Necessitaràs els següents widgets personalitzats:
+
+- Un widget que mostra una llista amb títols en negreta i items seleccionables més petits amb identació.
+- Un widget que mostri sigui un cercle verd o vermell, segons l'estat boleà a través d'un canvas (true/false)
+- Un widget que és un camp de text, amb un títol i una part editable.
+- Un widget per configurar i desconfigurar redireccions del port 80 cap a un altre port.
+- Un widget que mostra l'estat d'un servidor (en funcionament, aturat, reiniciant o error).
+
+A més, afegeix un apartat on es pot veure l'arbre de carpetes i arxius del servidor, dibuixat a través d'un canvas  (a l'estil baobab o daisydisk):
+
+[Baobab](https://apps.gnome.org/ca/Baobab/) (aka "Disk Usage Analyzer"):
+
+```bash
+sudo apt update
+sudo apt install baobab
+```
+
+<br/>
+<center><img src="./imgbaobab.png" style="max-height: 400px" alt="">
+<br/></center>
+<br/>
