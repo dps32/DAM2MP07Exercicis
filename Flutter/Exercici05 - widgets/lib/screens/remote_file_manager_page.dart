@@ -333,9 +333,7 @@ class _RemoteFileManagerPageState extends State<RemoteFileManagerPage> {
       return;
     }
 
-    final path = _remotePathController.text.trim().isEmpty
-        ? '/'
-        : _remotePathController.text.trim();
+    final path = _remotePathController.text.trim().isEmpty ? '/' : _remotePathController.text.trim();
     setState(() {
       _loadingEntries = true;
       _entryInfoText = '';

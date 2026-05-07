@@ -1,27 +1,10 @@
-// Defineix les eines/funcions que hi ha disponibles a flutter
 const tools = [
-  {
-    "type": "function",
-    "function": {
-      "name": "draw_circle",
-      "description":
-          "Dibuixa un cercle amb un radi determinat, si falta el radi posar-ne un de 10 per defecte, si el radi ha de ser aletori posar-ne un aleatori entre 10 i 25",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "x": {"type": "number"},
-          "y": {"type": "number"},
-          "radius": {"type": "number"}
-        }
-      }
-    }
-  },
   {
     "type": "function",
     "function": {
       "name": "draw_line",
       "description":
-          "Dibuixa una línia entre dos punts, si no s'especifica la posició escull els punts aleatòries entre x=10, y=10 i x=100, y=100",
+          "Dibuixa una linia. Pots usar coordenades absolutes o percentatges de la mida del canvas.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -29,6 +12,38 @@ const tools = [
           "startY": {"type": "number"},
           "endX": {"type": "number"},
           "endY": {"type": "number"},
+          "startPercentX": {"type": "number"},
+          "startPercentY": {"type": "number"},
+          "endPercentX": {"type": "number"},
+          "endPercentY": {"type": "number"},
+          "color": {"type": "string"},
+          "strokeWidth": {"type": "number"}
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "draw_circle",
+      "description":
+          "Dibuixa un cercle amb contorn, emplenat opcional i gradient opcional.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "x": {"type": "number"},
+          "y": {"type": "number"},
+          "percentX": {"type": "number"},
+          "percentY": {"type": "number"},
+          "radius": {"type": "number"},
+          "strokeColor": {"type": "string"},
+          "fillColor": {"type": "string"},
+          "gradientTo": {"type": "string"},
+          "gradient": {
+            "type": "string",
+            "enum": ["none", "linear", "radial"]
+          },
+          "strokeWidth": {"type": "number"}
         }
       }
     }
@@ -38,7 +53,7 @@ const tools = [
     "function": {
       "name": "draw_rectangle",
       "description":
-          "Dibuixa un rectangle definit per les coordenades superior-esquerra i inferior-dreta",
+          "Dibuixa un quadre o rectangle amb contorn, emplenat opcional i gradient opcional.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -46,9 +61,121 @@ const tools = [
           "topLeftY": {"type": "number"},
           "bottomRightX": {"type": "number"},
           "bottomRightY": {"type": "number"},
-        },
-        "required": ["topLeftX", "topLeftY", "bottomRightX", "bottomRightY"]
+          "topLeftPercentX": {"type": "number"},
+          "topLeftPercentY": {"type": "number"},
+          "bottomRightPercentX": {"type": "number"},
+          "bottomRightPercentY": {"type": "number"},
+          "strokeColor": {"type": "string"},
+          "fillColor": {"type": "string"},
+          "gradientTo": {"type": "string"},
+          "gradient": {
+            "type": "string",
+            "enum": ["none", "linear", "radial"]
+          },
+          "strokeWidth": {"type": "number"}
+        }
       }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "draw_text",
+      "description":
+          "Escriu text al canvas amb tipografia, mida, color, negreta i cursiva.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {"type": "string"},
+          "x": {"type": "number"},
+          "y": {"type": "number"},
+          "percentX": {"type": "number"},
+          "percentY": {"type": "number"},
+          "color": {"type": "string"},
+          "fontSize": {"type": "number"},
+          "fontFamily": {"type": "string"},
+          "bold": {"type": "boolean"},
+          "italic": {"type": "boolean"}
+        },
+        "required": ["text"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "select_shape",
+      "description":
+          "Selecciona una figura pel seu id o per una posicio del canvas.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "integer"},
+          "x": {"type": "number"},
+          "y": {"type": "number"},
+          "percentX": {"type": "number"},
+          "percentY": {"type": "number"}
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "delete_shape",
+      "description":
+          "Esborra una figura pel seu id. Si no hi ha id, esborra la seleccionada.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "integer"}
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "update_shape",
+      "description":
+          "Canvia propietats d'una figura. Si no hi ha id, modifica la seleccionada o l'ultima creada.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "integer"},
+          "x": {"type": "number"},
+          "y": {"type": "number"},
+          "percentX": {"type": "number"},
+          "percentY": {"type": "number"},
+          "endX": {"type": "number"},
+          "endY": {"type": "number"},
+          "width": {"type": "number"},
+          "height": {"type": "number"},
+          "radius": {"type": "number"},
+          "strokeColor": {"type": "string"},
+          "fillColor": {"type": "string"},
+          "color": {"type": "string"},
+          "gradientTo": {"type": "string"},
+          "gradient": {
+            "type": "string",
+            "enum": ["none", "linear", "radial"]
+          },
+          "strokeWidth": {"type": "number"},
+          "text": {"type": "string"},
+          "fontSize": {"type": "number"},
+          "fontFamily": {"type": "string"},
+          "bold": {"type": "boolean"},
+          "italic": {"type": "boolean"}
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "clear_canvas",
+      "description": "Esborra totes les figures del canvas.",
+      "parameters": {"type": "object", "properties": {}}
     }
   }
 ];
